@@ -1,0 +1,819 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://assets/zlayer/Zlayer.tscn" type="PackedScene" id=1]
+
+[sub_resource type="CubeMesh" id=1]
+
+[sub_resource type="SpatialMaterial" id=2]
+albedo_color = Color( 0.027451, 0.545098, 0.054902, 1 )
+
+[sub_resource type="BoxShape" id=3]
+extents = Vector3( -2.768, 0.04, 2.785 )
+
+[sub_resource type="BoxShape" id=4]
+extents = Vector3( 10, 0.2, 10 )
+
+[sub_resource type="CubeMesh" id=5]
+size = Vector3( 20, 0.4, 20 )
+
+[node name="level_test" type="Spatial"]
+
+[node name="floors" type="Spatial" parent="."]
+visible = false
+
+[node name="floor" type="RigidBody" parent="floors"]
+transform = Transform( 5, 0, 0, 0, 0.6, 0, 0, 0, 5, 0, 0, 0 )
+mode = 1
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="MeshInstance" type="MeshInstance" parent="floors/floor"]
+transform = Transform( 2.76783, 0, 0, 0, -0.0419805, 0, 0, 0, 2.76783, 0, 0, 0 )
+mesh = SubResource( 1 )
+material/0 = SubResource( 2 )
+
+[node name="CollisionShape" type="CollisionShape" parent="floors/floor"]
+transform = Transform( 1, 0, 0, 0, 1.031, 0, 0, 0, 0.994, 0, 0, 0 )
+shape = SubResource( 3 )
+
+[node name="floor2" type="RigidBody" parent="floors"]
+transform = Transform( 5, 0, 0, 0, 0.6, 0, 0, 0, 5, 27.682, 0, -27.682 )
+mode = 1
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="MeshInstance" type="MeshInstance" parent="floors/floor2"]
+transform = Transform( 2.76783, 0, 0, 0, -0.0419805, 0, 0, 0, 2.76783, 0, 0, 0 )
+mesh = SubResource( 1 )
+material/0 = SubResource( 2 )
+
+[node name="CollisionShape" type="CollisionShape" parent="floors/floor2"]
+transform = Transform( 1, 0, 0, 0, 1.031, 0, 0, 0, 0.994, 0, 0, 0 )
+shape = SubResource( 3 )
+
+[node name="floor4" type="RigidBody" parent="floors"]
+transform = Transform( 5, 0, 0, 0, 0.6, 0, 0, 0, 5, 0, 0, -27.682 )
+mode = 1
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="MeshInstance" type="MeshInstance" parent="floors/floor4"]
+transform = Transform( 2.76783, 0, 0, 0, -0.0419805, 0, 0, 0, 2.76783, 0, 0, 0 )
+mesh = SubResource( 1 )
+material/0 = SubResource( 2 )
+
+[node name="CollisionShape" type="CollisionShape" parent="floors/floor4"]
+transform = Transform( 1, 0, 0, 0, 1.031, 0, 0, 0, 0.994, 0, 0, 0 )
+shape = SubResource( 3 )
+
+[node name="floor3" type="RigidBody" parent="floors"]
+transform = Transform( 5, 0, 0, 0, 0.6, 0, 0, 0, 5, 27.682, 0, 0 )
+mode = 1
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="MeshInstance" type="MeshInstance" parent="floors/floor3"]
+transform = Transform( 2.76783, 0, 0, 0, -0.0419805, 0, 0, 0, 2.76783, 0, 0, 0 )
+mesh = SubResource( 1 )
+material/0 = SubResource( 2 )
+
+[node name="CollisionShape" type="CollisionShape" parent="floors/floor3"]
+transform = Transform( 1, 0, 0, 0, 1.031, 0, 0, 0, 0.994, 0, 0, 0 )
+shape = SubResource( 3 )
+
+[node name="floor5" type="RigidBody" parent="floors"]
+transform = Transform( 5, 0, 0, 0, 0.6, 0, 0, 0, 5, 55.364, 0, -27.682 )
+mode = 1
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="MeshInstance" type="MeshInstance" parent="floors/floor5"]
+transform = Transform( 2.76783, 0, 0, 0, -0.0419805, 0, 0, 0, 2.76783, 0, 0, 0 )
+mesh = SubResource( 1 )
+material/0 = SubResource( 2 )
+
+[node name="CollisionShape" type="CollisionShape" parent="floors/floor5"]
+transform = Transform( 1, 0, 0, 0, 1.031, 0, 0, 0, 0.994, 0, 0, 0 )
+shape = SubResource( 3 )
+
+[node name="floor6" type="RigidBody" parent="floors"]
+transform = Transform( 5, 0, 0, 0, 0.6, 0, 0, 0, 5, 55.364, 0, 0 )
+mode = 1
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="MeshInstance" type="MeshInstance" parent="floors/floor6"]
+transform = Transform( 2.76783, 0, 0, 0, -0.0419805, 0, 0, 0, 2.76783, 0, 0, 0 )
+mesh = SubResource( 1 )
+material/0 = SubResource( 2 )
+
+[node name="CollisionShape" type="CollisionShape" parent="floors/floor6"]
+transform = Transform( 1, 0, 0, 0, 1.031, 0, 0, 0, 0.994, 0, 0, 0 )
+shape = SubResource( 3 )
+
+[node name="floor7" type="RigidBody" parent="floors"]
+transform = Transform( 5, 0, 0, 0, 0.6, 0, 0, 0, 5, 0, 0, 55.364 )
+mode = 1
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="MeshInstance" type="MeshInstance" parent="floors/floor7"]
+transform = Transform( 2.76783, 0, 0, 0, -0.0419805, 0, 0, 0, 2.76783, 0, 0, 0 )
+mesh = SubResource( 1 )
+material/0 = SubResource( 2 )
+
+[node name="CollisionShape" type="CollisionShape" parent="floors/floor7"]
+transform = Transform( 1, 0, 0, 0, 1.031, 0, 0, 0, 0.994, 0, 0, 0 )
+shape = SubResource( 3 )
+
+[node name="floor8" type="RigidBody" parent="floors"]
+transform = Transform( 5, 0, 0, 0, 0.6, 0, 0, 0, 5, 27.682, 0, 27.682 )
+mode = 1
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="MeshInstance" type="MeshInstance" parent="floors/floor8"]
+transform = Transform( 2.76783, 0, 0, 0, -0.0419805, 0, 0, 0, 2.76783, 0, 0, 0 )
+mesh = SubResource( 1 )
+material/0 = SubResource( 2 )
+
+[node name="CollisionShape" type="CollisionShape" parent="floors/floor8"]
+transform = Transform( 1, 0, 0, 0, 1.031, 0, 0, 0, 0.994, 0, 0, 0 )
+shape = SubResource( 3 )
+
+[node name="floor9" type="RigidBody" parent="floors"]
+transform = Transform( 5, 0, 0, 0, 0.6, 0, 0, 0, 5, 0, 0, 27.682 )
+mode = 1
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="MeshInstance" type="MeshInstance" parent="floors/floor9"]
+transform = Transform( 2.76783, 0, 0, 0, -0.0419805, 0, 0, 0, 2.76783, 0, 0, 0 )
+mesh = SubResource( 1 )
+material/0 = SubResource( 2 )
+
+[node name="CollisionShape" type="CollisionShape" parent="floors/floor9"]
+transform = Transform( 1, 0, 0, 0, 1.031, 0, 0, 0, 0.994, 0, 0, 0 )
+shape = SubResource( 3 )
+
+[node name="floor13" type="RigidBody" parent="floors"]
+transform = Transform( 5, 0, 0, 0, 0.6, 0, 0, 0, 5, -27.682, 0, 0 )
+mode = 1
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="MeshInstance" type="MeshInstance" parent="floors/floor13"]
+transform = Transform( 2.76783, 0, 0, 0, -0.0419805, 0, 0, 0, 2.76783, 0, 0, 0 )
+mesh = SubResource( 1 )
+material/0 = SubResource( 2 )
+
+[node name="CollisionShape" type="CollisionShape" parent="floors/floor13"]
+transform = Transform( 1, 0, 0, 0, 1.031, 0, 0, 0, 0.994, 0, 0, 0 )
+shape = SubResource( 3 )
+
+[node name="floor14" type="RigidBody" parent="floors"]
+transform = Transform( 5, 0, 0, 0, 0.6, 0, 0, 0, 5, -27.682, 0, -27.682 )
+mode = 1
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="MeshInstance" type="MeshInstance" parent="floors/floor14"]
+transform = Transform( 2.76783, 0, 0, 0, -0.0419805, 0, 0, 0, 2.76783, 0, 0, 0 )
+mesh = SubResource( 1 )
+material/0 = SubResource( 2 )
+
+[node name="CollisionShape" type="CollisionShape" parent="floors/floor14"]
+transform = Transform( 1, 0, 0, 0, 1.031, 0, 0, 0, 0.994, 0, 0, 0 )
+shape = SubResource( 3 )
+
+[node name="floor17" type="RigidBody" parent="floors"]
+transform = Transform( 5, 0, 0, 0, 0.6, 0, 0, 0, 5, 27.682, 0, -55.364 )
+mode = 1
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="MeshInstance" type="MeshInstance" parent="floors/floor17"]
+transform = Transform( 2.76783, 0, 0, 0, -0.0419805, 0, 0, 0, 2.76783, 0, 0, 0 )
+mesh = SubResource( 1 )
+material/0 = SubResource( 2 )
+
+[node name="CollisionShape" type="CollisionShape" parent="floors/floor17"]
+transform = Transform( 1, 0, 0, 0, 1.031, 0, 0, 0, 0.994, 0, 0, 0 )
+shape = SubResource( 3 )
+
+[node name="floor18" type="RigidBody" parent="floors"]
+transform = Transform( 5, 0, 0, 0, 0.6, 0, 0, 0, 5, 0, 0, -55.364 )
+mode = 1
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="MeshInstance" type="MeshInstance" parent="floors/floor18"]
+transform = Transform( 2.76783, 0, 0, 0, -0.0419805, 0, 0, 0, 2.76783, 0, 0, 0 )
+mesh = SubResource( 1 )
+material/0 = SubResource( 2 )
+
+[node name="CollisionShape" type="CollisionShape" parent="floors/floor18"]
+transform = Transform( 1, 0, 0, 0, 1.031, 0, 0, 0, 0.994, 0, 0, 0 )
+shape = SubResource( 3 )
+
+[node name="floor19" type="RigidBody" parent="floors"]
+transform = Transform( 5, 0, 0, 0, 0.6, 0, 0, 0, 5, 55.364, 0, -55.364 )
+mode = 1
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="MeshInstance" type="MeshInstance" parent="floors/floor19"]
+transform = Transform( 2.76783, 0, 0, 0, -0.0419805, 0, 0, 0, 2.76783, 0, 0, 0 )
+mesh = SubResource( 1 )
+material/0 = SubResource( 2 )
+
+[node name="CollisionShape" type="CollisionShape" parent="floors/floor19"]
+transform = Transform( 1, 0, 0, 0, 1.031, 0, 0, 0, 0.994, 0, 0, 0 )
+shape = SubResource( 3 )
+
+[node name="floor20" type="RigidBody" parent="floors"]
+transform = Transform( 5, 0, 0, 0, 0.6, 0, 0, 0, 5, -27.682, 0, -55.364 )
+mode = 1
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="MeshInstance" type="MeshInstance" parent="floors/floor20"]
+transform = Transform( 2.76783, 0, 0, 0, -0.0419805, 0, 0, 0, 2.76783, 0, 0, 0 )
+mesh = SubResource( 1 )
+material/0 = SubResource( 2 )
+
+[node name="CollisionShape" type="CollisionShape" parent="floors/floor20"]
+transform = Transform( 1, 0, 0, 0, 1.031, 0, 0, 0, 0.994, 0, 0, 0 )
+shape = SubResource( 3 )
+
+[node name="floor15" type="RigidBody" parent="floors"]
+transform = Transform( 5, 0, 0, 0, 0.6, 0, 0, 0, 5, -27.682, 0, 55.364 )
+mode = 1
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="MeshInstance" type="MeshInstance" parent="floors/floor15"]
+transform = Transform( 2.76783, 0, 0, 0, -0.0419805, 0, 0, 0, 2.76783, 0, 0, 0 )
+mesh = SubResource( 1 )
+material/0 = SubResource( 2 )
+
+[node name="CollisionShape" type="CollisionShape" parent="floors/floor15"]
+transform = Transform( 1, 0, 0, 0, 1.031, 0, 0, 0, 0.994, 0, 0, 0 )
+shape = SubResource( 3 )
+
+[node name="floor16" type="RigidBody" parent="floors"]
+transform = Transform( 5, 0, 0, 0, 0.6, 0, 0, 0, 5, -27.682, 0, 27.682 )
+mode = 1
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="MeshInstance" type="MeshInstance" parent="floors/floor16"]
+transform = Transform( 2.76783, 0, 0, 0, -0.0419805, 0, 0, 0, 2.76783, 0, 0, 0 )
+mesh = SubResource( 1 )
+material/0 = SubResource( 2 )
+
+[node name="CollisionShape" type="CollisionShape" parent="floors/floor16"]
+transform = Transform( 1, 0, 0, 0, 1.031, 0, 0, 0, 0.994, 0, 0, 0 )
+shape = SubResource( 3 )
+
+[node name="floor21" type="RigidBody" parent="floors"]
+transform = Transform( 5, 0, 0, 0, 0.6, 0, 0, 0, 5, -55.364, 0, 0 )
+mode = 1
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="MeshInstance" type="MeshInstance" parent="floors/floor21"]
+transform = Transform( 2.76783, 0, 0, 0, -0.0419805, 0, 0, 0, 2.76783, 0, 0, 0 )
+mesh = SubResource( 1 )
+material/0 = SubResource( 2 )
+
+[node name="CollisionShape" type="CollisionShape" parent="floors/floor21"]
+transform = Transform( 1, 0, 0, 0, 1.031, 0, 0, 0, 0.994, 0, 0, 0 )
+shape = SubResource( 3 )
+
+[node name="floor22" type="RigidBody" parent="floors"]
+transform = Transform( 5, 0, 0, 0, 0.6, 0, 0, 0, 5, -55.364, 0, -27.682 )
+mode = 1
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="MeshInstance" type="MeshInstance" parent="floors/floor22"]
+transform = Transform( 2.76783, 0, 0, 0, -0.0419805, 0, 0, 0, 2.76783, 0, 0, 0 )
+mesh = SubResource( 1 )
+material/0 = SubResource( 2 )
+
+[node name="CollisionShape" type="CollisionShape" parent="floors/floor22"]
+transform = Transform( 1, 0, 0, 0, 1.031, 0, 0, 0, 0.994, 0, 0, 0 )
+shape = SubResource( 3 )
+
+[node name="floor23" type="RigidBody" parent="floors"]
+transform = Transform( 5, 0, 0, 0, 0.6, 0, 0, 0, 5, -55.364, 0, -55.364 )
+mode = 1
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="MeshInstance" type="MeshInstance" parent="floors/floor23"]
+transform = Transform( 2.76783, 0, 0, 0, -0.0419805, 0, 0, 0, 2.76783, 0, 0, 0 )
+mesh = SubResource( 1 )
+material/0 = SubResource( 2 )
+
+[node name="CollisionShape" type="CollisionShape" parent="floors/floor23"]
+transform = Transform( 1, 0, 0, 0, 1.031, 0, 0, 0, 0.994, 0, 0, 0 )
+shape = SubResource( 3 )
+
+[node name="floor24" type="RigidBody" parent="floors"]
+transform = Transform( 5, 0, 0, 0, 0.6, 0, 0, 0, 5, -55.364, 0, 55.364 )
+mode = 1
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="MeshInstance" type="MeshInstance" parent="floors/floor24"]
+transform = Transform( 2.76783, 0, 0, 0, -0.0419805, 0, 0, 0, 2.76783, 0, 0, 0 )
+mesh = SubResource( 1 )
+material/0 = SubResource( 2 )
+
+[node name="CollisionShape" type="CollisionShape" parent="floors/floor24"]
+transform = Transform( 1, 0, 0, 0, 1.031, 0, 0, 0, 0.994, 0, 0, 0 )
+shape = SubResource( 3 )
+
+[node name="floor25" type="RigidBody" parent="floors"]
+transform = Transform( 5, 0, 0, 0, 0.6, 0, 0, 0, 5, -55.364, 0, 27.682 )
+mode = 1
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="MeshInstance" type="MeshInstance" parent="floors/floor25"]
+transform = Transform( 2.76783, 0, 0, 0, -0.0419805, 0, 0, 0, 2.76783, 0, 0, 0 )
+mesh = SubResource( 1 )
+material/0 = SubResource( 2 )
+
+[node name="CollisionShape" type="CollisionShape" parent="floors/floor25"]
+transform = Transform( 1, 0, 0, 0, 1.031, 0, 0, 0, 0.994, 0, 0, 0 )
+shape = SubResource( 3 )
+
+[node name="floor26" type="RigidBody" parent="floors"]
+transform = Transform( 5, 0, 0, 0, 0.6, 0, 0, 0, 5, -83.046, 0, 0 )
+mode = 1
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="MeshInstance" type="MeshInstance" parent="floors/floor26"]
+transform = Transform( 2.76783, 0, 0, 0, -0.0419805, 0, 0, 0, 2.76783, 0, 0, 0 )
+mesh = SubResource( 1 )
+material/0 = SubResource( 2 )
+
+[node name="CollisionShape" type="CollisionShape" parent="floors/floor26"]
+transform = Transform( 1, 0, 0, 0, 1.031, 0, 0, 0, 0.994, 0, 0, 0 )
+shape = SubResource( 3 )
+
+[node name="floor27" type="RigidBody" parent="floors"]
+transform = Transform( 5, 0, 0, 0, 0.6, 0, 0, 0, 5, -83.046, 0, -27.682 )
+mode = 1
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="MeshInstance" type="MeshInstance" parent="floors/floor27"]
+transform = Transform( 2.76783, 0, 0, 0, -0.0419805, 0, 0, 0, 2.76783, 0, 0, 0 )
+mesh = SubResource( 1 )
+material/0 = SubResource( 2 )
+
+[node name="CollisionShape" type="CollisionShape" parent="floors/floor27"]
+transform = Transform( 1, 0, 0, 0, 1.031, 0, 0, 0, 0.994, 0, 0, 0 )
+shape = SubResource( 3 )
+
+[node name="floor28" type="RigidBody" parent="floors"]
+transform = Transform( 5, 0, 0, 0, 0.6, 0, 0, 0, 5, -83.046, 0, -55.364 )
+mode = 1
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="MeshInstance" type="MeshInstance" parent="floors/floor28"]
+transform = Transform( 2.76783, 0, 0, 0, -0.0419805, 0, 0, 0, 2.76783, 0, 0, 0 )
+mesh = SubResource( 1 )
+material/0 = SubResource( 2 )
+
+[node name="CollisionShape" type="CollisionShape" parent="floors/floor28"]
+transform = Transform( 1, 0, 0, 0, 1.031, 0, 0, 0, 0.994, 0, 0, 0 )
+shape = SubResource( 3 )
+
+[node name="floor29" type="RigidBody" parent="floors"]
+transform = Transform( 5, 0, 0, 0, 0.6, 0, 0, 0, 5, -83.046, 0, 55.364 )
+mode = 1
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="MeshInstance" type="MeshInstance" parent="floors/floor29"]
+transform = Transform( 2.76783, 0, 0, 0, -0.0419805, 0, 0, 0, 2.76783, 0, 0, 0 )
+mesh = SubResource( 1 )
+material/0 = SubResource( 2 )
+
+[node name="CollisionShape" type="CollisionShape" parent="floors/floor29"]
+transform = Transform( 1, 0, 0, 0, 1.031, 0, 0, 0, 0.994, 0, 0, 0 )
+shape = SubResource( 3 )
+
+[node name="floor30" type="RigidBody" parent="floors"]
+transform = Transform( 5, 0, 0, 0, 0.6, 0, 0, 0, 5, -83.046, 0, 27.682 )
+mode = 1
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="MeshInstance" type="MeshInstance" parent="floors/floor30"]
+transform = Transform( 2.76783, 0, 0, 0, -0.0419805, 0, 0, 0, 2.76783, 0, 0, 0 )
+mesh = SubResource( 1 )
+material/0 = SubResource( 2 )
+
+[node name="CollisionShape" type="CollisionShape" parent="floors/floor30"]
+transform = Transform( 1, 0, 0, 0, 1.031, 0, 0, 0, 0.994, 0, 0, 0 )
+shape = SubResource( 3 )
+
+[node name="floor31" type="RigidBody" parent="floors"]
+transform = Transform( 5, 0, 0, 0, 0.6, 0, 0, 0, 5, 83.046, 0, 0 )
+mode = 1
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="MeshInstance" type="MeshInstance" parent="floors/floor31"]
+transform = Transform( 2.76783, 0, 0, 0, -0.0419805, 0, 0, 0, 2.76783, 0, 0, 0 )
+mesh = SubResource( 1 )
+material/0 = SubResource( 2 )
+
+[node name="CollisionShape" type="CollisionShape" parent="floors/floor31"]
+transform = Transform( 1, 0, 0, 0, 1.031, 0, 0, 0, 0.994, 0, 0, 0 )
+shape = SubResource( 3 )
+
+[node name="floor32" type="RigidBody" parent="floors"]
+transform = Transform( 5, 0, 0, 0, 0.6, 0, 0, 0, 5, 83.046, 0, -27.682 )
+mode = 1
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="MeshInstance" type="MeshInstance" parent="floors/floor32"]
+transform = Transform( 2.76783, 0, 0, 0, -0.0419805, 0, 0, 0, 2.76783, 0, 0, 0 )
+mesh = SubResource( 1 )
+material/0 = SubResource( 2 )
+
+[node name="CollisionShape" type="CollisionShape" parent="floors/floor32"]
+transform = Transform( 1, 0, 0, 0, 1.031, 0, 0, 0, 0.994, 0, 0, 0 )
+shape = SubResource( 3 )
+
+[node name="floor33" type="RigidBody" parent="floors"]
+transform = Transform( 5, 0, 0, 0, 0.6, 0, 0, 0, 5, 83.046, 0, -55.364 )
+mode = 1
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="MeshInstance" type="MeshInstance" parent="floors/floor33"]
+transform = Transform( 2.76783, 0, 0, 0, -0.0419805, 0, 0, 0, 2.76783, 0, 0, 0 )
+mesh = SubResource( 1 )
+material/0 = SubResource( 2 )
+
+[node name="CollisionShape" type="CollisionShape" parent="floors/floor33"]
+transform = Transform( 1, 0, 0, 0, 1.031, 0, 0, 0, 0.994, 0, 0, 0 )
+shape = SubResource( 3 )
+
+[node name="floor34" type="RigidBody" parent="floors"]
+transform = Transform( 5, 0, 0, 0, 0.6, 0, 0, 0, 5, 83.046, 0, 55.364 )
+mode = 1
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="MeshInstance" type="MeshInstance" parent="floors/floor34"]
+transform = Transform( 2.76783, 0, 0, 0, -0.0419805, 0, 0, 0, 2.76783, 0, 0, 0 )
+mesh = SubResource( 1 )
+material/0 = SubResource( 2 )
+
+[node name="CollisionShape" type="CollisionShape" parent="floors/floor34"]
+transform = Transform( 1, 0, 0, 0, 1.031, 0, 0, 0, 0.994, 0, 0, 0 )
+shape = SubResource( 3 )
+
+[node name="floor35" type="RigidBody" parent="floors"]
+transform = Transform( 5, 0, 0, 0, 0.6, 0, 0, 0, 5, 83.046, 0, 27.682 )
+mode = 1
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="MeshInstance" type="MeshInstance" parent="floors/floor35"]
+transform = Transform( 2.76783, 0, 0, 0, -0.0419805, 0, 0, 0, 2.76783, 0, 0, 0 )
+mesh = SubResource( 1 )
+material/0 = SubResource( 2 )
+
+[node name="CollisionShape" type="CollisionShape" parent="floors/floor35"]
+transform = Transform( 1, 0, 0, 0, 1.031, 0, 0, 0, 0.994, 0, 0, 0 )
+shape = SubResource( 3 )
+
+[node name="floor10" type="RigidBody" parent="floors"]
+transform = Transform( 5, 0, 0, 0, 0.6, 0, 0, 0, 5, 27.682, 0, 55.364 )
+mode = 1
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="MeshInstance" type="MeshInstance" parent="floors/floor10"]
+transform = Transform( 2.76783, 0, 0, 0, -0.0419805, 0, 0, 0, 2.76783, 0, 0, 0 )
+mesh = SubResource( 1 )
+material/0 = SubResource( 2 )
+
+[node name="CollisionShape" type="CollisionShape" parent="floors/floor10"]
+transform = Transform( 1, 0, 0, 0, 1.031, 0, 0, 0, 0.994, 0, 0, 0 )
+shape = SubResource( 3 )
+
+[node name="floor11" type="RigidBody" parent="floors"]
+transform = Transform( 5, 0, 0, 0, 0.6, 0, 0, 0, 5, 55.364, 0, 27.682 )
+mode = 1
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="MeshInstance" type="MeshInstance" parent="floors/floor11"]
+transform = Transform( 2.76783, 0, 0, 0, -0.0419805, 0, 0, 0, 2.76783, 0, 0, 0 )
+mesh = SubResource( 1 )
+material/0 = SubResource( 2 )
+
+[node name="CollisionShape" type="CollisionShape" parent="floors/floor11"]
+transform = Transform( 1, 0, 0, 0, 1.031, 0, 0, 0, 0.994, 0, 0, 0 )
+shape = SubResource( 3 )
+
+[node name="floor12" type="RigidBody" parent="floors"]
+transform = Transform( 5, 0, 0, 0, 0.6, 0, 0, 0, 5, 55.364, 0, 55.364 )
+mode = 1
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="MeshInstance" type="MeshInstance" parent="floors/floor12"]
+transform = Transform( 2.76783, 0, 0, 0, -0.0419805, 0, 0, 0, 2.76783, 0, 0, 0 )
+mesh = SubResource( 1 )
+material/0 = SubResource( 2 )
+
+[node name="CollisionShape" type="CollisionShape" parent="floors/floor12"]
+transform = Transform( 1, 0, 0, 0, 1.031, 0, 0, 0, 0.994, 0, 0, 0 )
+shape = SubResource( 3 )
+
+[node name="floor36" type="RigidBody" parent="floors"]
+transform = Transform( 5, 0, 0, 0, 0.6, 0, 0, 0, 5, 0, 0, 83.046 )
+mode = 1
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="MeshInstance" type="MeshInstance" parent="floors/floor36"]
+transform = Transform( 2.76783, 0, 0, 0, -0.0419805, 0, 0, 0, 2.76783, 0, 0, 0 )
+mesh = SubResource( 1 )
+material/0 = SubResource( 2 )
+
+[node name="CollisionShape" type="CollisionShape" parent="floors/floor36"]
+transform = Transform( 1, 0, 0, 0, 1.031, 0, 0, 0, 0.994, 0, 0, 0 )
+shape = SubResource( 3 )
+
+[node name="floor37" type="RigidBody" parent="floors"]
+transform = Transform( 5, 0, 0, 0, 0.6, 0, 0, 0, 5, -27.682, 0, 83.046 )
+mode = 1
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="MeshInstance" type="MeshInstance" parent="floors/floor37"]
+transform = Transform( 2.76783, 0, 0, 0, -0.0419805, 0, 0, 0, 2.76783, 0, 0, 0 )
+mesh = SubResource( 1 )
+material/0 = SubResource( 2 )
+
+[node name="CollisionShape" type="CollisionShape" parent="floors/floor37"]
+transform = Transform( 1, 0, 0, 0, 1.031, 0, 0, 0, 0.994, 0, 0, 0 )
+shape = SubResource( 3 )
+
+[node name="floor38" type="RigidBody" parent="floors"]
+transform = Transform( 5, 0, 0, 0, 0.6, 0, 0, 0, 5, -55.364, 0, 83.046 )
+mode = 1
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="MeshInstance" type="MeshInstance" parent="floors/floor38"]
+transform = Transform( 2.76783, 0, 0, 0, -0.0419805, 0, 0, 0, 2.76783, 0, 0, 0 )
+mesh = SubResource( 1 )
+material/0 = SubResource( 2 )
+
+[node name="CollisionShape" type="CollisionShape" parent="floors/floor38"]
+transform = Transform( 1, 0, 0, 0, 1.031, 0, 0, 0, 0.994, 0, 0, 0 )
+shape = SubResource( 3 )
+
+[node name="floor39" type="RigidBody" parent="floors"]
+transform = Transform( 5, 0, 0, 0, 0.6, 0, 0, 0, 5, -83.046, 0, 83.046 )
+mode = 1
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="MeshInstance" type="MeshInstance" parent="floors/floor39"]
+transform = Transform( 2.76783, 0, 0, 0, -0.0419805, 0, 0, 0, 2.76783, 0, 0, 0 )
+mesh = SubResource( 1 )
+material/0 = SubResource( 2 )
+
+[node name="CollisionShape" type="CollisionShape" parent="floors/floor39"]
+transform = Transform( 1, 0, 0, 0, 1.031, 0, 0, 0, 0.994, 0, 0, 0 )
+shape = SubResource( 3 )
+
+[node name="floor40" type="RigidBody" parent="floors"]
+transform = Transform( 5, 0, 0, 0, 0.6, 0, 0, 0, 5, 83.046, 0, 83.046 )
+mode = 1
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="MeshInstance" type="MeshInstance" parent="floors/floor40"]
+transform = Transform( 2.76783, 0, 0, 0, -0.0419805, 0, 0, 0, 2.76783, 0, 0, 0 )
+mesh = SubResource( 1 )
+material/0 = SubResource( 2 )
+
+[node name="CollisionShape" type="CollisionShape" parent="floors/floor40"]
+transform = Transform( 1, 0, 0, 0, 1.031, 0, 0, 0, 0.994, 0, 0, 0 )
+shape = SubResource( 3 )
+
+[node name="floor41" type="RigidBody" parent="floors"]
+transform = Transform( 5, 0, 0, 0, 0.6, 0, 0, 0, 5, 27.682, 0, 83.046 )
+mode = 1
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="MeshInstance" type="MeshInstance" parent="floors/floor41"]
+transform = Transform( 2.76783, 0, 0, 0, -0.0419805, 0, 0, 0, 2.76783, 0, 0, 0 )
+mesh = SubResource( 1 )
+material/0 = SubResource( 2 )
+
+[node name="CollisionShape" type="CollisionShape" parent="floors/floor41"]
+transform = Transform( 1, 0, 0, 0, 1.031, 0, 0, 0, 0.994, 0, 0, 0 )
+shape = SubResource( 3 )
+
+[node name="floor42" type="RigidBody" parent="floors"]
+transform = Transform( 5, 0, 0, 0, 0.6, 0, 0, 0, 5, 55.364, 0, 83.046 )
+mode = 1
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="MeshInstance" type="MeshInstance" parent="floors/floor42"]
+transform = Transform( 2.76783, 0, 0, 0, -0.0419805, 0, 0, 0, 2.76783, 0, 0, 0 )
+mesh = SubResource( 1 )
+material/0 = SubResource( 2 )
+
+[node name="CollisionShape" type="CollisionShape" parent="floors/floor42"]
+transform = Transform( 1, 0, 0, 0, 1.031, 0, 0, 0, 0.994, 0, 0, 0 )
+shape = SubResource( 3 )
+
+[node name="floor43" type="RigidBody" parent="floors"]
+transform = Transform( 5, 0, 0, 0, 0.6, 0, 0, 0, 5, 0, 0, -83.046 )
+mode = 1
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="MeshInstance" type="MeshInstance" parent="floors/floor43"]
+transform = Transform( 2.76783, 0, 0, 0, -0.0419805, 0, 0, 0, 2.76783, 0, 0, 0 )
+mesh = SubResource( 1 )
+material/0 = SubResource( 2 )
+
+[node name="CollisionShape" type="CollisionShape" parent="floors/floor43"]
+transform = Transform( 1, 0, 0, 0, 1.031, 0, 0, 0, 0.994, 0, 0, 0 )
+shape = SubResource( 3 )
+
+[node name="floor44" type="RigidBody" parent="floors"]
+transform = Transform( 5, 0, 0, 0, 0.6, 0, 0, 0, 5, -27.682, 0, -83.046 )
+mode = 1
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="MeshInstance" type="MeshInstance" parent="floors/floor44"]
+transform = Transform( 2.76783, 0, 0, 0, -0.0419805, 0, 0, 0, 2.76783, 0, 0, 0 )
+mesh = SubResource( 1 )
+material/0 = SubResource( 2 )
+
+[node name="CollisionShape" type="CollisionShape" parent="floors/floor44"]
+transform = Transform( 1, 0, 0, 0, 1.031, 0, 0, 0, 0.994, 0, 0, 0 )
+shape = SubResource( 3 )
+
+[node name="floor45" type="RigidBody" parent="floors"]
+transform = Transform( 5, 0, 0, 0, 0.6, 0, 0, 0, 5, -55.364, 0, -83.046 )
+mode = 1
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="MeshInstance" type="MeshInstance" parent="floors/floor45"]
+transform = Transform( 2.76783, 0, 0, 0, -0.0419805, 0, 0, 0, 2.76783, 0, 0, 0 )
+mesh = SubResource( 1 )
+material/0 = SubResource( 2 )
+
+[node name="CollisionShape" type="CollisionShape" parent="floors/floor45"]
+transform = Transform( 1, 0, 0, 0, 1.031, 0, 0, 0, 0.994, 0, 0, 0 )
+shape = SubResource( 3 )
+
+[node name="floor46" type="RigidBody" parent="floors"]
+transform = Transform( 5, 0, 0, 0, 0.6, 0, 0, 0, 5, -83.046, 0, -83.046 )
+mode = 1
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="MeshInstance" type="MeshInstance" parent="floors/floor46"]
+transform = Transform( 2.76783, 0, 0, 0, -0.0419805, 0, 0, 0, 2.76783, 0, 0, 0 )
+mesh = SubResource( 1 )
+material/0 = SubResource( 2 )
+
+[node name="CollisionShape" type="CollisionShape" parent="floors/floor46"]
+transform = Transform( 1, 0, 0, 0, 1.031, 0, 0, 0, 0.994, 0, 0, 0 )
+shape = SubResource( 3 )
+
+[node name="floor47" type="RigidBody" parent="floors"]
+transform = Transform( 5, 0, 0, 0, 0.6, 0, 0, 0, 5, 83.046, 0, -83.046 )
+mode = 1
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="MeshInstance" type="MeshInstance" parent="floors/floor47"]
+transform = Transform( 2.76783, 0, 0, 0, -0.0419805, 0, 0, 0, 2.76783, 0, 0, 0 )
+mesh = SubResource( 1 )
+material/0 = SubResource( 2 )
+
+[node name="CollisionShape" type="CollisionShape" parent="floors/floor47"]
+transform = Transform( 1, 0, 0, 0, 1.031, 0, 0, 0, 0.994, 0, 0, 0 )
+shape = SubResource( 3 )
+
+[node name="floor48" type="RigidBody" parent="floors"]
+transform = Transform( 5, 0, 0, 0, 0.6, 0, 0, 0, 5, 27.682, 0, -83.046 )
+mode = 1
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="MeshInstance" type="MeshInstance" parent="floors/floor48"]
+transform = Transform( 2.76783, 0, 0, 0, -0.0419805, 0, 0, 0, 2.76783, 0, 0, 0 )
+mesh = SubResource( 1 )
+material/0 = SubResource( 2 )
+
+[node name="CollisionShape" type="CollisionShape" parent="floors/floor48"]
+transform = Transform( 1, 0, 0, 0, 1.031, 0, 0, 0, 0.994, 0, 0, 0 )
+shape = SubResource( 3 )
+
+[node name="floor49" type="RigidBody" parent="floors"]
+transform = Transform( 5, 0, 0, 0, 0.6, 0, 0, 0, 5, 55.364, 0, -83.046 )
+mode = 1
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="MeshInstance" type="MeshInstance" parent="floors/floor49"]
+transform = Transform( 2.76783, 0, 0, 0, -0.0419805, 0, 0, 0, 2.76783, 0, 0, 0 )
+mesh = SubResource( 1 )
+material/0 = SubResource( 2 )
+
+[node name="CollisionShape" type="CollisionShape" parent="floors/floor49"]
+transform = Transform( 1, 0, 0, 0, 1.031, 0, 0, 0, 0.994, 0, 0, 0 )
+shape = SubResource( 3 )
+
+[node name="Zlayer" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 9.41571, 1.41872 )
+
+[node name="RigidBody" type="RigidBody" parent="."]
+mode = 1
+
+[node name="CollisionShape" type="CollisionShape" parent="RigidBody"]
+shape = SubResource( 4 )
+
+[node name="MeshInstance" type="MeshInstance" parent="RigidBody"]
+mesh = SubResource( 5 )
+material/0 = null
