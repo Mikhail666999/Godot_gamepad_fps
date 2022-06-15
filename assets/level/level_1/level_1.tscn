@@ -1,0 +1,53 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://assets/obj/floors/floor3/floor3.tscn" type="PackedScene" id=1]
+[ext_resource path="res://assets/zlayer/Zlayer.tscn" type="PackedScene" id=2]
+[ext_resource path="res://assets/obj/triger/triger.tscn" type="PackedScene" id=4]
+[ext_resource path="res://assets/level/level_1/level_1.gd" type="Script" id=5]
+
+[sub_resource type="Animation" id=1]
+resource_name = "1"
+length = 10.0
+loop = true
+step = 0.5
+
+[sub_resource type="Animation" id=2]
+length = 0.001
+
+[node name="level_1" type="Spatial"]
+script = ExtResource( 5 )
+
+[node name="floors3" type="Spatial" parent="."]
+
+[node name="floor3" parent="floors3" instance=ExtResource( 1 )]
+transform = Transform( 3.52929, 0, 0, 0, 1, 0, 0, 0, 3.52929, 0.23, 0, 0 )
+
+[node name="floor4" parent="floors3" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 16.1572, 0, 0 )
+
+[node name="floor5" parent="floors3" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 27.0066, 0, 5.29739 )
+
+[node name="floor6" parent="floors3" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 36.1374, 0, -4.51367 )
+
+[node name="floors4" type="Spatial" parent="."]
+
+[node name="trigers" type="Spatial" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -161.391, 0 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="triger" parent="trigers" instance=ExtResource( 4 )]
+transform = Transform( 149.763, 0, 0, 0, 1, 0, 0, 0, 98.713, 25, 41.3732, 0 )
+
+[node name="Zlayer" parent="." instance=ExtResource( 2 )]
+transform = Transform( -0.226634, 0, -0.97398, 0, 1, 0, 0.97398, 0, -0.226634, 0, 3.68185, 0 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+autoplay = "1"
+anims/1 = SubResource( 1 )
+anims/RESET = SubResource( 2 )
+
+[connection signal="body_entered" from="trigers/triger" to="." method="_on_triger_body_entered"]
